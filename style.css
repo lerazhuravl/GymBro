@@ -1,13 +1,150 @@
+/* Основные стили */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
+                url('https://avatars.mds.yandex.net/i?id=6ed84b1b34216e35fc8c1a221f9829d6_l-5495066-images-thumbs&n=13') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #2d3436;
+}
+
+/* Контейнер */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Заголовок */
+.main-title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    background-color: rgba(45, 52, 54, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Форма */
+.user-form {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+.form-input {
+    width: 70%;
+    padding: 14px 20px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.9);
+}
+
+.form-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.3);
+    background: white;
+    outline: none;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #2980b9, #3498db);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Список пользователей */
+.users-list {
+    margin-top: 40px;
 }
 
 .user-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     background: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.user-name {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.user-details {
+    margin: 8px 0 0 0;
+    color: #636e72;
+    font-size: 1rem;
+}
+
+.user-actions {
+    margin-left: 25px;
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #e74c3c, #d63031);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #d63031, #e74c3c);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
