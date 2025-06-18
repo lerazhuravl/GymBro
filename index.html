@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>GymBro</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymBro - Фитнес трекер</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>GymBro Dashboard</h1>
-    <form id="user-form">
-        <input type="text" id="name" placeholder="Имя" required>
-        <button type="submit">Добавить</button>
-    </form>
-    <div id="users-list"></div>
+    <div class="container">
+        <h1 class="main-title">GymBro Dashboard</h1>
+        
+        <form id="user-form" class="user-form">
+            <input type="text" id="name" class="form-input" placeholder="Введите имя пользователя" required>
+            <button type="submit" class="submit-btn">Добавить пользователя</button>
+        </form>
+
+        <div id="users-list" class="users-list">
+            <div class="user-card">
+                <div class="user-info">
+                    <h3 class="user-name">Иван Петров</h3>
+                    <p class="user-details">ID: 1 | Тренер по кроссфиту</p>
+                </div>
+                <div class="user-actions">
+                    <button class="delete-btn">Удалить</button>
+                </div>
+            </div>
+            
+            <div class="user-card">
+                <div class="user-info">
+                    <h3 class="user-name">Мария Сидорова</h3>
+                    <p class="user-details">ID: 2 | Фитнес-инструктор</p>
+                </div>
+                <div class="user-actions">
+                    <button class="delete-btn">Удалить</button>
+                </div>
+            </div>
+            
+            <div class="user-card">
+                <div class="user-info">
+                    <h3 class="user-name">Алексей Иванов</h3>
+                    <p class="user-details">ID: 3 | Тренер по йоге</p>
+                </div>
+                <div class="user-actions">
+                    <button class="delete-btn">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
