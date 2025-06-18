@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>GymBro</title>
-    <link rel="stylesheet" href="style.css"> <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>GymBro Dashboard</h1>
-    <div id="users-list"></div> <!-- Сюда вставим список пользователей -->
-    <script src="app.js"></script> <!-- Подключаем JS -->
+    
+    <form id="user-form">
+        <input type="text" id="name" placeholder="Имя" required>
+        <button type="submit">Добавить</button>
+    </form>
+
+    <div id="users-list"></div>
+
+    <script src="app.js"></script>
 </body>
 </html>
