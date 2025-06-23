@@ -8,43 +8,60 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="main-title">GymBro Dashboard</h1>
-        
-        <form id="user-form" class="user-form">
-            <input type="text" id="name" class="form-input" placeholder="Введите имя пользователя" required>
-            <button type="submit" class="submit-btn">Добавить пользователя</button>
-        </form>
+        <header class="header">
+            <h1>GymBro</h1>
+            <div id="auth-status"></div>
+        </header>
 
-        <div id="users-list" class="users-list">
-            <div class="user-card">
-                <div class="user-info">
-                    <h3 class="user-name">Иван Петров</h3>
-                    <p class="user-details">ID: 1 | Тренер по кроссфиту</p>
-                </div>
-                <div class="user-actions">
-                    <button class="delete-btn">Удалить</button>
-                </div>
+        <div class="auth-forms">
+            <!-- Форма регистрации -->
+            <div class="form-container" id="register-form-container">
+                <h2>Регистрация</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="username">Логин:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <button type="submit" class="btn">Зарегистрироваться</button>
+                </form>
             </div>
-            
-            <div class="user-card">
-                <div class="user-info">
-                    <h3 class="user-name">Мария Сидорова</h3>
-                    <p class="user-details">ID: 2 | Фитнес-инструктор</p>
-                </div>
-                <div class="user-actions">
-                    <button class="delete-btn">Удалить</button>
-                </div>
+
+            <!-- Форма авторизации -->
+            <div class="form-container" id="login-form-container">
+                <h2>Вход</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Логин:</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Пароль:</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn">Войти</button>
+                </form>
             </div>
-            
-            <div class="user-card">
-                <div class="user-info">
-                    <h3 class="user-name">Алексей Иванов</h3>
-                    <p class="user-details">ID: 3 | Тренер по йоге</p>
-                </div>
-                <div class="user-actions">
-                    <button class="delete-btn">Удалить</button>
-                </div>
-            </div>
+        </div>
+
+        <!-- Секция профиля -->
+        <div class="profile-section" id="profile-section" style="display: none;">
+            <h2>Ваш профиль</h2>
+            <div id="profile-data"></div>
+            <button id="logout-btn" class="btn">Выйти</button>
+        </div>
+
+        <!-- Список пользователей -->
+        <div class="users-section">
+            <h2>Список пользователей</h2>
+            <div id="users-list"></div>
         </div>
     </div>
 
